@@ -14,8 +14,11 @@
 3. 将清洗后的数据保存至SQLite数据库，以便于进一步分析。
 
 ## 3.数据分析与可视化结果
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/f1faaa7b-e457-4e73-9425-6a88e0b9cd64)
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/22e850c7-29c5-48f9-a1f3-959ab046f7e7)
+
+![数据分析图一](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/f16afd37-1b0b-4b3b-9ecc-0233428d7a8e)
+
+![数据分析图二](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/db01796f-4362-4f7f-9cf8-38cc276aaa4e)
+
 
 ### 3.1市场概况
 
@@ -97,14 +100,17 @@ data.to_sql('rent', con=engine, index=False, if_exists='append')
 ```
 
 ## 清洗后的数据
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/18449d99-289b-4df2-b984-6e718064edb4)
+
+![数据分析图二](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/9c9b68fc-ef82-4e4d-83ac-773f836fd625)
+
 
 # 三.数据分析可视化
 
 ## 3.1 整体情况
 
 数据显示，北京市租房价格受多种因素影响，包括地理位置、交通便利性、房屋面积、户型结构等。例如，朝阳区和东城区由于其优越的地理位置和便捷的交通，租房价格普遍较高。而通州区和房山区作为相对较远的区域，租房价格相对较低。
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/1e0047a7-2b8d-4f88-af07-9bbbe26b2143)
+
+![屏幕截图 2024-04-17 195547](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/79eba83f-d7d8-49b2-a614-09d4b766c5c7)
 
 该数据集总共有6024个房源信息，平均每平米的租金为169元，每套房源的平均出租面积为15.68平米。
 
@@ -114,13 +120,16 @@ data.to_sql('rent', con=engine, index=False, if_exists='append')
 
 - 核心区域：朝阳区、东城区的租房价格普遍在2000元以上，部分高端住宅区价格甚至超过9000元。
 - 非核心区域：通州区、房山区的租房价格多在2000元以下，价格更加亲民。
-  ![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/79c37603-61a9-4b79-a5ba-7136ae42878f)
+- 
+![屏幕截图 2024-04-17 195547](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/a90e1e60-97aa-41c5-a567-7c9417b710af)
 
 
 ## 3.3 小区分析
 
 房租最贵的小区TOP 10。半壁街南路1号院的房租最高，达到596元/平米，是平均值169元/平米的3倍。
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/f2b73248-fedf-4969-98a0-ad2c75aac78c)
+
+![屏幕截图 2024-04-17 204214](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/5aa9c228-d8c6-410b-a80c-9a4c872d7777)
+
 
 
 ## 3.4 户型楼层分析
@@ -131,15 +140,15 @@ data.to_sql('rent', con=engine, index=False, if_exists='append')
 
 1室1卫的户型在租房市场中占有较大比例，这可能与北京的单身人口和年轻专业人士较多有关。此外，3室1卫的户型也有一定的市场需求，这可能与家庭型租户的需求相匹配。例如，“京通苑阳光华苑”提供4室2卫的户型，面积达到116平方米，适合大家庭居住。
 
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/8db801b8-39c8-4fdf-a8cc-d50ec8ac90be)
-
+![屏幕截图 2024-04-17 204322](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/ab6dbba0-027e-4b36-99c5-480088c8ce25)
 
 国家规定楼层7层以上需要装电梯，依据这个规定，我们根据楼层数来判断房源是否有电梯。
 
 从下图可以看到，电梯房的房源数量比较多，毕竟楼层高，建的房子多，此外，电梯房平均每平米的租金也要比非电梯房贵10块钱。
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/aea884f2-1cbc-4beb-95ce-5750a7007993)
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/a551d87f-075d-468f-9a5f-c746eda0574d)
 
+![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/dd5b08a1-5f32-4188-867b-5e3f693c7f57)
+
+![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/d6df03c1-0f31-4513-9092-efa67bfcdc3a)
 
 在区分出电梯房之后，我们再引入楼层的纬度进行分析。
 
@@ -148,13 +157,15 @@ data.to_sql('rent', con=engine, index=False, if_exists='append')
 南方天气潮湿，在春天的时候，有时会出现回南天这一气象，导致低楼层会出现地板、墙壁渗水，所以在南方一般都不爱租低层。
 
 从房源数量上看，非电梯房的高层房源最多，低层房源最少。说明非电梯房的高层房源不容易租出去，这点在租金上也有所体现。
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/99b9bc6a-1905-438d-9c8e-14d391fccb7e)
 
+![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/5db08be0-e100-479a-ab34-8cb5f7c4a046)
 
 ## 3.5 交通分析
 
 从地理位置上来看，交通越便利，租金也越贵，这个符合一般认知。
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/abe4140d-9322-4d22-b871-293cf8eb3fac)
-![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/b3dd88f2-6298-4ca7-8e1c-084e9ec76fd0)
+
+![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/17d5b278-01b6-4840-b20f-7040feffa134)
 
 靠近地铁站的房源价格普遍高于同区域其他房源。例如，距离地铁站500米以内的房源，其价格可比同区域远离地铁的房源高出10%至20%。
+
+![image](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/ec16a249-9db7-4f40-a383-7c638a5b6eb7)

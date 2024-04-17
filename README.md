@@ -101,8 +101,7 @@ data.to_sql('rent', con=engine, index=False, if_exists='append')
 
 ## 清洗后的数据
 
-![数据分析图二](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/9c9b68fc-ef82-4e4d-83ac-773f836fd625)
-
+![清洗后的数据](https://github.com/liuil-o/6000-rental-data-analysis/assets/150576077/9d900f68-1b66-4f02-9c2c-0ddb2a85fd4a)
 
 # 三.数据分析可视化
 
